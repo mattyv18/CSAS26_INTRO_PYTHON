@@ -143,11 +143,11 @@ r"./practice.txt"
 
 # Practice time!
 
-## Q1: Manipulating Strings, 4 minutes
+## Q1: Manipulating Strings, 5 minutes
 
 ### Try not to look things up
 
-### https://link.charitarth.dev/ucsas-practice
+### https://link.charitarth.dev/ucsas-practice](https://colab.research.google.com/drive/1t_x1m4N0gopUKamo-9Aju3qZUeKLh1sg?authuser=1#scrollTo=unkOaxFDv1ZA
 
 ---
 
