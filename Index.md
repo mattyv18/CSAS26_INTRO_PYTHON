@@ -147,8 +147,7 @@ r"./practice.txt"
 
 ### Try not to look things up
 
-### https://colab.research.google.com/drive/practice
-
+### https://colab.research.google.com/drive/1t_x1m4N0gopUKamo-9Aju3qZUeKLh1sg?usp=sharing
 ---
 
 # Data Types (continued)
