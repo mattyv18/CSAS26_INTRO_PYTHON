@@ -1,9 +1,9 @@
 ---
 marp: true
 title: Introduction to Python
-author: Charitarth Chugh
-description: UCSAS 2022
-theme: rose-pine
+author: Matthew Venzie
+description: UCSAS 2026
+theme: uncover
 # class: [blue]
 ---
 
@@ -13,9 +13,9 @@ theme: rose-pine
 
 # Introduction to Python
 
-## CSAS 2024
+## CSAS 2026
 
-### Charitarth Chugh
+### Matthew Venzie
 
 ---
 
@@ -23,28 +23,29 @@ theme: rose-pine
 
 ![bg right 60%](https://raw.githubusercontent.com/charitarthchugh/website/master/assets/images/myself.png)
 
-- 4th Year Mathematics-Statistics Student at UConn
-- President of UConn AI Club
+- 3rd Year Applied Mathematics and Statistics Student at UConn
+- Unergraduate Time Series Researcher
 
 ## Interests
 
-- Efficient Deep Learning
-- Adversarial Deep Learning
+- Modeling Time Series Data with a Neural Network Architecture(Mamba)
+- Modeling with Biological Data(Biostatistics)
+- Cooking
 
-<!-- ## Aspirations:
+## Aspirations:
 
-Build really cool stuff related to deep learning! -->
+Statistics PhD!
 
 ---
 
 # Why Python?
+- Python is a readable object oriented language making it easier to understand to those who have never delt with programming
 
-- Python is a language with very diverse applications, from
-  software development to research
-- As a language, it is easy to understand because there is an emphasis on readability.
-- The ecosystem of libraries and tools is awesome, which makes finding niche packages a breeze.
-  - If you are not able to find anything that suits your needs, it is fairly easy to create a python package of your own as well.
-- The only place where Python is potentially not used is when speed is critical.
+- It has many applications in fields such as software development, data engineering, statistics and mathematics
+
+- There is a vast amount of libraries and tools that allow you to use whichever packages may fit your needs
+
+- It is primarily used in new and hot fields such as Data Science, AI and Machine Learning
 
 ---
 
@@ -52,37 +53,33 @@ Build really cool stuff related to deep learning! -->
 ---
 # Prerequisites:
 
-A device with Internet access, preferably a laptop.
+A laptop with access to internet.
 
-<!-- ### Getting set up:
-
-In the terminal, run
-`pip install -U numpy pandas matplotib seaborn` -->
 
 ---
 
-# What we will be covering today!
-
-- Basic Syntax (Variables, Indentation, Comments)
+# What we will be covering!
+ basic syntax, data types, functions, loops, conditionals and classes, then combining this knowledge to build a simple algorithm.
+- Basic Syntax (Variables, Indentation, Comments, Print Statements)
 - Data Types
   - Strings (`str`)
   - Numerical types (`int`, `float`, `complex`)
   - Mapping (`dict`)
-- Conditions, Loops, and Functions
-- Python Packages and Virtual Environments
+- Conditions, Loops, Functions, and Classes
+- Python Packages and Algorithms
 
 ---
 
 # Syntax
-
-- To comment a line, prefix it with a `#`
+- We make comments to help document how our code works, so that when we come back to it we can easily remind ourselves what the code does
+- To make a comment, just prefix whatever you typed with a `#`
 - In Python, a newline indicates a start of a new command
 
 ```python
-# Print Hello, UCSAS
-print("Hello, CSAS!")
+# Print Hello, CSAS 2026
+print("Hello, CSAS 2026!")
 
-print("Workshop going good?")
+print("Are you bored?")
 ```
 
 ---
@@ -92,41 +89,46 @@ print("Workshop going good?")
 - Integer (`int`)
 - Float (`float`)
 - complex (`complex`)
-  - Ex. `1 +3j` where 3j is the complex component
+  - Ex. `1 + 5j` where 5j is the complex component
 - Boolean (`bool`)
-  - Difference here is true is `True` and false is `False`
+  - Boolean represents two values wither 'True' or 'False'
 
 ---
 
-<!-- _class: [blue,tinytext] -->
+
 
 # Data Types (continued)
 
-## Strings
+## Strings ('str')
 
-- String is an array of bytes representing Unicode characters and thus elements can be accessed.
-- Multiline strings need three quotes and keep line breaks intact while printing.
-- Operators like + concatenates strings, in searches for membership
-- Commonly used methods:
+- String is basically a sequence of characters that can be accessed or iterated through 
+- Multiline strings need three quotes and keep line breaks intact when printed.
+- Operators like + concatenates(combines) strings
+- When searching for membership commonly used methods are:
   - `replace("a", "b")`: replaces a with b in string
-  - `split()`: splits based on given separator
-  - `upper()`, `lower()`, `strip()`, `capitalize()`, `casefold()`,
-  - `count('a')`, `endswith()`, `startswith()`, `find()`, `index()`
+  - `split()`: splits a string based on a given separator in () that can be found in the string
+  - `upper()` converts letters to uppercase, `lower()` converts letters to lower case, `strip()` removes leading and trailing whitespace, `capitalize()` capitalizes first letter and makes rest lower case
+  - `count('a')` counts how many times 'a' appears in string, `endswith('a')` checks if string ends with specified substring 'a' and returns boolean, `startswith('a')` checks if a string starts with specified substring 'a' and returns boolean, `find('a')` returns the index of first occurence of specified substring 'a' and returns -1 if not found, `index('a')` same as find but raises error
 
 ---
 
-## Sidenote: types of strings
+## Note: types of strings
 
 #### F-strings:
 
 ```python
->>> f"\{3} is 3"
+>>> f"{5+2} is 7"
 
-"\3 is 3"
+"7 is 7"
+
+>>> x = 7
+>>> f"{x} is 7"
+
+"7 is 7"
 ```
 
-- Makes it very easy to insert values and expressions into a string.
-- Very useful in print statements to see where your code is not working 🙂
+- Makes it very easy to insert values, expressions and variables into a string.
+- Very useful when printing multiple strings that include a changing variable
 
 #### R-strings
 
