@@ -143,7 +143,7 @@ r"./practice.txt"
 
 # Practice time!
 
-## Q1: Manipulating Strings, 5 minutes
+## Q1, Q2: Manipulating Strings, 5 minutes
 
 ### Try not to look things up
 
@@ -158,12 +158,28 @@ r"./practice.txt"
 ["a", 1, True]
 ```
 
-- Can contain any type of elements & even a function.
-- Indexed and Ordered as a sequence.
-- Index starts at 0, like most programming languages
-- Elements can be accessed in the following ways: `x[0]`, `x[-1]`, `x[0:3]`, `x[:2]`, `x[2:]`
-- Elements can be modified using `x[1:2] = ["UCSAS", [1,2,3]]`
-- Methods: `len(x): length`, `x.insert(2, "Python")`, `x.append("Python")`, `x.remove([1, 2])`, `x.pop(1)`, `x.sort()`,`y = x.copy()`, `x.extend(y)`
+- Can contain any type of elements even functions
+- Created using `[]`
+- Indexed and Ordered as a sequence
+- Index starts at 0
+- Elements can be accessed like so:
+  - First element: `x[0]`
+  - Last Element: `x[-1]`
+  - Slice of elements 0-2 does not include 3: `x[0:3]`
+  - Slice of elements 0-1: `x[:2]`
+  - Slice of elements 2-(n-1), with element n being the last element of the list: `x[2:]`
+  - Copy of entire list: `x[:]`
+- Elements can be modified using `x[1:4] = ["UCSAS", [1,2,3]]`
+  - Thie would replace how ever many elemnts are indicated in teh slice with the elements provided, so elements 1,2,3 are replaced with `"UCSAS", [1,2,3]`
+- Methods:
+  - `len(x)`: returns length of list x
+  - `x.insert(2, "Python")`: Insterts "Python" at index 2 of list x
+  - `x.append("Python")`: Adds "Python" as new element at end of list x
+  - `x.remove(2)`: Removes first occerence of element 2 from list x
+  - `x.pop(1)`: Removes and returns element at index 1
+  - `x.sort()`: Sorts elements of list in order i.e. numerical if elements are integers and floats and alphabetical if strings
+  - `y = x.copy()`: Creates copy of list x
+  - `x.extend(y)`: Appends elements of list y to the end of list x
 
 ---
 
@@ -177,9 +193,10 @@ r"./practice.txt"
 
 - Created using `()`
 - Very similar to a list, but elements inside cannot be changed or be added (immutability)
-  - This means that for any change, a new tuple has to be created
+  - This means that for any change made to the tuple, a new tuple will be created
 - Accessing items is similar to a list.
 - Methods: `len(x)`, `x.count("a")`, `x.index()`
+  - Cannot use most methods of list on Tuple
 
 ---
 
@@ -188,17 +205,23 @@ r"./practice.txt"
 ## Dictionary
 
 - A `dict` is a mapped data type
-  - It consists of a key-value pair, where a key is used to access a value.
+  - This means it consists of a key-value pair, where a key is used to access a value i.e. the key maps to the value.
 - The keys of a dictionary are immutable & duplicate keys will replace the original value, but the values themselves are mutable
 
 ```python
->>> ucsas = "{"workshop": "Introduction To Python", "year": 2022}
->>> ucsas["workshop"]
+>>> ucsas = {"workshop": "Introduction To Python", "year": 2026} # creatng the dictionary
+>>> ucsas["workshop"] # Accessing Values of "workshop" key
 "Introduction To Python"
 >>> ucsas["year"]
-2022
->>> ucsas.keys()
+2027
+>>> ucsas.keys() # returns keys
 ["workshop", "year"]
+>>> ucsas["workshop"][0:12]
+"Introduction"
+>>> ucsas = {"workshop": "Introduction To Python", "year": [2025, 2026]}
+>>> ucsas["year"].append(2027) # "year" now has value [2025, 2026, 2027]
+>>> uscas
+{'workshop': 'Introduction To Python', 'year': [2025, 2026, 2027]}
 ```
 
 ---
@@ -215,7 +238,7 @@ r"./practice.txt"
 # Data Types
 
 - Obviously this is not an exhaustive list
-- So if you ever need to inspect the type of something, there is a nice built-in `type()` that finds the type.
+- So if you ever need to inspect the type of something, there is a nice built-in `type(x)` that returns the type of x.
 
 ---
 
@@ -226,21 +249,29 @@ r"./practice.txt"
 
 ```python
 # Integer Assignment
-x = 2
+>>> x = 2
 # String
-z = "UCSAS"
-## Boolean
-w = True
-print(x)
-print(z)
-print(w)
+>>> z = "UCSAS"
+# Boolean
+>>> w = True
+# Dictionary
+>>> y = {"workshop": "Introduction To Python", "year": [2025, 2026]}
+# printing variables
+>>> print(x)
+2
+>>> print(z)
+UCSAS
+>>> print(w)
+True
+>>> print(y)
+{"workshop": "Introduction To Python", "year": [2025, 2026]}
 ```
 
 ---
 
 # Practice time!
 
-## Q2: Manipulating lists
+## Q3: Manipulating lists
 
 ### 5 min
 
