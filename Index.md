@@ -147,7 +147,7 @@ r"./practice.txt"
 
 ### Try not to look things up
 
-### https://link.charitarth.dev/ucsas-practice](https://colab.research.google.com/drive/1t_x1m4N0gopUKamo-9Aju3qZUeKLh1sg?authuser=1#scrollTo=unkOaxFDv1ZA
+### https://colab.research.google.com/drive/practice
 
 ---
 
