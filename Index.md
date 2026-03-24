@@ -423,18 +423,22 @@ def fib(n):    #returns n-th fibonacci number
 
 # Scope
 
-- Scope: A variable created inside a function has only local scope which means it can only be used inside the function. It can be accessed by another function if it is within the previous function.
-- A variable created in the main body has global scope.
+- Scope: There are 4 scopes when it comes to accessing variables
+  - Local: variables defined inside a function
+  - Enclosing: Variables defined within nested functions, that is, it is defined outside the inner function and inside the outer function
+  - Global: variables defined outside all functions
+  - Built-in: built in pre-defined python names and functions
+- A variable defined inside a function cannot be accessed outside the function
+- A variable defined outside of a function can be accessed from within a function
+- Try not to define functions or variables that are already pre-defined by python(built-in)
 
 ---
 
-# Practice 3
+# Practice Q4
 
-## Catalan Numbers
+## Basketball Preformance Score
 
 ## 6 minutes
-
-https://link.charitarth.dev/ucsas-practice
 
 ---
 
@@ -537,7 +541,7 @@ conda install pandas
 
 ---
 
-## Python Virtual Environments
+## Python Virtual Environments *add information about creating and running python scripts*
 
 - Self-contained directory that encapsulates a Python interpreter along with its associated libraries and scripts.
 - It enables developers to create isolated environments for different projects, each with its own dependencies and versions of Python packages.
