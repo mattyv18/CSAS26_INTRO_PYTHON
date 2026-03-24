@@ -255,7 +255,7 @@ r"./practice.txt"
 # Boolean
 >>> w = True
 # Dictionary
->>> y = {"workshop": "Introduction To Python", "year": [2025, 2026]}
+>>> y = {"sports": "Hockey", "Baseball", Basketball, "year": [2025, 2026]}
 # printing variables
 >>> print(x)
 2
@@ -264,7 +264,7 @@ UCSAS
 >>> print(w)
 True
 >>> print(y)
-{"workshop": "Introduction To Python", "year": [2025, 2026]}
+{"sports": "Hockey", "Baseball", Basketball, "year": [2025, 2026]}
 ```
 
 ---
@@ -281,7 +281,7 @@ True
 
 Arithmetic Operators:
 
-- add: `+`, subtract: `-`, multiply: `*`, division: `/`, modulus: `%`, exponentiation: `**`, floor division: `//`
+- add: `+`, subtract: `-`, multiply: `*`, division: `/`, modulus: `%`(returns a remainder), exponentiation: `**`, floor division: `//` (rounds down to nearest integer after dividing)
 
 Assignment Operators:
 
@@ -310,20 +310,23 @@ Logical Operators:
 # Conditionals (continued)
 
 ```python
-## checking three scores and using `and`.
-a, b, c = 55, 60, 90
+## which player scored the most points this season and using `and` and `or`.
+i, j, k = 95, 103, 70
 
-if a > b and a > c:
-    print('a is first')
-elif a < b and b < c:
-    print('c is first')
-else: print('b is first')
+if  i > j and i > k:
+    print(f'{i} scored the most')
+elif j > i and j > k:
+    print(f'{j} scored the most')
+elif i == j and j == k:
+    print('They scored the same amount of points') 
+else:
+    print(f'{k} scored the most')
 
 
-## checking between two scores in one line
-a, b = 55, 70
+## checking between two players in one line
+i, j = 109, 115
 
-print('a is first') if a > b else print('b is first')
+print('i scored more') if i > j else print('j scored more')
 
 ```
 
@@ -337,15 +340,23 @@ print('a is first') if a > b else print('b is first')
 - `break` and `continue` allows to either break or continue based on a condition within the loop.
 
 ```python
-num = 9380949384209
-count = 0
-while num!=0:
-  if num < 0:
-    break
-  else:
-    continue
-  num %= 10
-  count += 1
+## First player to 5 matches won, wins game
+a_score = 0
+b_score = 0
+
+A = 15
+B = 21
+while a_score != 5 and b_score != 5:
+     if A > B:
+        a_score += 1
+        continue
+     else:
+        b_score += 1
+        continue
+print('Player A wins') if a_score > b_score else print('Player B wins')
+
+
+
 ```
 
 ---
@@ -355,34 +366,55 @@ while num!=0:
 ## For loop
 
 - Used to iterate over a sequence.
-- `range()` function is useful as it gives a list of integers to iterate over
+- `range(y, x)` function is useful as it gives a list of integers from y to x to iterate over excluding x
+  -By default range(x) will start at 0 and stop at x
 
 ```python
-x = ['usual', 'usual', 'usual', 'amazing', 'usual', 'usual', 'exit']
-count = 0
-for i in range(len(x)):
-    if x[i] == 'usual':
-        count += 1
-print(count)
+## How many balls did the pitcher throw
 
-count = 0
-for temp in x:
-    if temp == 'usual':
-        count += 1
-print(count)
+pitch_count = ["ball", "ball", "strike", "ball", "strike", "strike", "strike", "ball", "ball"]
+
+ball_count = 0
+for i in range(len(pitch_count)):    #iterate using range()
+    if pitch_count[i] == "ball":
+       ball_count += 1
+    else:
+       continue
+
+
+for pitch in pitch_count:      #iterate directly through list
+    if pitch == "ball":
+       ball_count += 1
+    else:
+       continue
+
+print(f'The pitcher threw {ball_count} balls')
 ```
 
 ---
 
 # Functions
 
-- A function is defined using keywords def followed by the function name and arguments within parenthesis.
+- A function is defined using keywords `def` followed by the function name and arguments within parenthesis.
 - A function should either print or return some value. Else pass should be used to avoid error.
 - Often when we use functions to obtain values and store them in another variable, we need a return statement.
+- Type hints are used for readability in functions to tell the reader what type of argument the function takes
+  - Just place a semi-colon after the argument and indicate which type
+  - This wont have any affect on the function it can still take other types it just tells you what type it should be taking 
 - A lambda is a small anonymous function which returns the result in the same line (a useful property).
 
 ```python
-def fib(n):
+
+def ball_count(pitch_count: list)  # ball count function takes list
+    ball_count = 0
+    for pitch in pitch_count:    
+        if pitch == "ball":
+           ball_count += 1
+        else:
+           continue
+    return print(f'The pitcher threw {ball_count} balls')
+
+def fib(n):    #returns n-th fibonacci number
     if (n==1 or n==2) return 1
     else return fib(n - 1) + fib(n - 2)
 ```
