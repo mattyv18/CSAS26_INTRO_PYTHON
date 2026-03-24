@@ -625,18 +625,18 @@ print("Total Games Played By Players:", total_games)
 import pandas as pd
 # Create a DataFrame
 data = {
-    'Date': ['2024-01-15', '2024-01-18', '2024-01-20', '2024-01-22', '2024-01-25'],
-    'Team': ['Lakers', 'Lakers', 'Celtics', 'Celtics', 'Warriors'],
-    'Opponent': ['Clippers', 'Warriors', 'Lakers', 'Heat', 'Celtics'],
-    'Points Scored': [110, 105, 120, 95, 115],
-    'Points Allowed': [100, 98, 105, 90, 110]
+    'Date': ['2025-02-15', '2025-02-16', '2025-02-19', '2025-02-23', '2025-02-25'],
+    'Team': ['Steelers', 'Eagles', 'Jets', 'Eagles', 'Patriots'],
+    'Opponent': ['Ravens', 'Cowboys', 'Bills', 'Giants', 'Dolphins'],
+    'Points Scored': [30, 28, 54, 21, 28],
+    'Points Allowed': [14, 16, 35, 6, 40]
 }
 df = pd.DataFrame(data)
 # Calculate a new column: Point Differential
-df.iloc[:,'Point Differential'] = df['Points Scored'] - df['Points Allowed']
+df['Point Differential'] = df['Points Scored'] - df['Points Allowed']
 print("\nDataFrame with Point Differential:\n", df)
-# Filter the DataFrame to show only Lakers games
-lakers_games = df[df['Team'] == 'Lakers']
+# Filter the DataFrame to show only Eagles games
+lakers_games = df[df['Team'] == 'Eagles']
 print("\nLakers Games:\n", lakers_games)
 # Filter for games where the point differential is greater than 10
 high_scoring_games = df[df['Point Differential'] > 10]
