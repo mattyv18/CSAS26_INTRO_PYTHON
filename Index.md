@@ -452,27 +452,36 @@ def fib(n):    #returns n-th fibonacci number
 ---
 
 ```python
-class Gene:
-    def __init__(self, creationid, creationseq):
-        self.id = creationid
-        self.seq = creationseq
+class SoccerPlayer:
+    def __init__(self, name, goals, assists, matches_played):
+        self.name = name
+        self.goals = goals
+        self.assists = assists
+        self.matches_played = matches_played
 
-    def length(self):
-        return(str(len(self.seq)))
+    def goals_per_match(self):
+        if self.matches_played == 0:
+            return 0
+        return self.goals / self.matches_played
 
-    # search for first instance
-    def search(self, searchseq):
-        return(self.seq.find(searchseq))
+    def total_contribution(self):
+        return self.goals + self.assists
 
-print('Gene Object: Length and search')
+    def add_match(self, assists_scored  goals_scored):
+        self.goals += goals_scored
+        self.assists += assists_scored
+        self.matches_played += 1
+        
 
-x = Gene(11, 'AGTCATCGA# Important References
-- W3Schools
-- FreeCodeCamp
-# AcACTG')
-print(f'Gene length:{x.length()}')
-print(f"Gene search for AA:{x.search('AA')}")
+
+print('Soccer Player Stats')
+
+x = SoccerPlayer(Matt, 6, 3, 2)   
+print(f'Goals per match:{x.goals_per_match()}')
+print(f"Total Points Contributed:{x.total_contribution()}")
+x.add_match(3,2)    # add new match
 print(type(x))
+
 ```
 
 ---
@@ -499,11 +508,10 @@ sorted(iterable, /, *, key=None, reverse=False)
 
 ---
 
-# Practice 4
+# Practice Q5
 
-## Getting Area
+## Hockey Statistics
 
-### https://link.charitarth.dev/ucsas-practice
 
 ---
 
@@ -541,25 +549,18 @@ conda install pandas
 
 ---
 
-## Python Virtual Environments *add information about creating and running python scripts*
+## Python Virtual Environments 
 
 - Self-contained directory that encapsulates a Python interpreter along with its associated libraries and scripts.
 - It enables developers to create isolated environments for different projects, each with its own dependencies and versions of Python packages.
 - This isolation prevents conflicts between packages and ensures project is reproducible across different environments.
-- Some common ways of creating virtual environments are conda and venv
+- A common way of creating a virtual environments is conda
+- To use conda first install either Anaconda or Miniconda see https://www.anaconda.com/docs/getting-started/miniconda/main
+
 
 ---
 
 ## Creating Virtual Environment
-
-### Venv
-
-```sh
-python -m venv venv
-# Using virtual environmants
-source venv/bin/activate # Unix
-venv\Scripts\activate.ps1 # Windows
-```
 
 ### Conda
 
@@ -567,6 +568,8 @@ venv\Scripts\activate.ps1 # Windows
 conda create -n env_name
 conda activate -n env_name
 ```
+
+
 
 ---
 
@@ -586,27 +589,30 @@ conda activate -n env_name
 ## NumPy Example
 ```py
 import numpy as np
-# Create a 2D NumPy array representing basketball player statistics
+# Create a 2D NumPy array representing hockey player statistics
 player_stats = np.array([
-    [20, 5, 3, 1.80],  # Player 1: Points, Rebounds, Assists, Height
-    [15, 8, 2, 1.90],  # Player 2
-    [25, 6, 4, 1.85],  # Player 3
-    [18, 7, 3, 1.75]   # Player 4
+    [40, 39, 30, 1.8, 80],  # Player 1: Total Goals, Total Assists, Total penalties minutes, Height(m), Games Played
+    [20, 50, 20, 1.70, 79],  # Player 2
+    [30, 40, 16, 1.65, 68],  # Player 3
+    [60, 20, 34, 1.95, 72]   # Player 4
 ])
 # Accessing elements
-print("\nPoints scored by Player 2:", player_stats[1, 0])  # Row 1, Column 0
-# Calculating the average points scored
-average_points = np.mean(player_stats[:, 0])  # All rows, column 0
-print("\nAverage Points Scored:", average_points)
+print(f"\nPoints scored by Player 2: {player_stats[1, 0] + player_stats[1, 1]}")# add goals and assists, row 1 column 0 and row 1 column 1
+# Calculating the average goals scored
+average_goals = np.mean(player_stats[:, 0])  # All rows, column 0
+print("\nAverage Goals Scored Among players:", average_goals)
 # Calculating the average height
 average_height = np.mean(player_stats[:, 3])
 print("Average Height:", average_height)
-# Finding the maximum rebounds
-max_rebounds = np.max(player_stats[:, 1])
-print("Maximum Rebounds:", max_rebounds)
-# Calculating the total points for all players
-total_points = np.sum(player_stats[:, 0])
-print("Total Points Scored by all players:", total_points)
+# Finding the maximum penalty minutes
+max_pen = np.max(player_stats[:, 2])
+print("Maximum Penalty Minutes:", max_pen)
+# Finding the minimum assists
+min_assists = np.min(player_stats[:, 1])
+print("Minimum Assists:", min_assists)
+# Calculating the total games played for all players
+total_games= np.sum(player_stats[:, 4])
+print("Total Games Played By Players:", total_games)
 ```
 ---
 ## Pandas
@@ -686,6 +692,6 @@ plt.show()
 
 ---
 
-# https://charitarth.dev
+# 
 
 # Email me at contact@charitarth.dev if you have any questions!
