@@ -7,9 +7,12 @@ theme: uncover
 # class: [blue]
 ---
 
-<!-- _class: lead -->
-
-![bg right](assets/python-logo-colourful.png)
+<table>
+  <tr>
+    <td><img src="game.csv.zip"></td>
+    <td><img src="forecast_vs_actual2.png"></td>
+  </tr>
+</table>
 
 # Introduction to Python
 
