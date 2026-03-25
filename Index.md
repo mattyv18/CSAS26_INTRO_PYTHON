@@ -626,8 +626,8 @@ import pandas as pd
 # Create a DataFrame
 data = {
     'Date': ['2025-02-15', '2025-02-16', '2025-02-19', '2025-02-23', '2025-02-25'],
-    'Team': ['Steelers', 'Eagles', 'Jets', 'Eagles', 'Patriots'],
-    'Opponent': ['Ravens', 'Cowboys', 'Bills', 'Giants', 'Dolphins'],
+    'Team': ['Steelers', 'Eagles', 'Jets', 'Eagles', 'Steelers'],
+    'Opponent': ['Ravens', 'Cowboys', 'Ravens', 'Giants', 'Dolphins'],
     'Points Scored': [30, 28, 54, 21, 28],
     'Points Allowed': [14, 16, 35, 6, 40]
 }
@@ -636,14 +636,14 @@ df = pd.DataFrame(data)
 df['Point Differential'] = df['Points Scored'] - df['Points Allowed']
 print("\nDataFrame with Point Differential:\n", df)
 # Filter the DataFrame to show only Eagles games
-lakers_games = df[df['Team'] == 'Eagles']
-print("\nLakers Games:\n", lakers_games)
-# Filter for games where the point differential is greater than 10
-high_scoring_games = df[df['Point Differential'] > 10]
-print("\nHigh Scoring Games (Point Differential > 10):\n", high_scoring_games)
-# Calculate the average points scored by the Lakers
-average_lakers_points = df[df['Team'] == 'Lakers']['Points Scored'].mean()
-print("\nAverage Points Scored by the Lakers:", average_lakers_points)
+eagles_games = df[df['Team'] == 'Eagles']
+print("\nEagles Games:\n", eagles_games)
+# Filter for games where the point differential is greater than 14
+high_scoring_games = df[df['Point Differential'] > 14]
+print("\nHigh Scoring Games (Point Differential > 14):\n", high_scoring_games)
+# Calculate the average points scored by the Eagles
+average_eagles_points = df[df['Team'] == 'Eagles']['Points Scored'].mean()
+print("\nAverage Points Scored by the Eagles:", average_eagles_points)
 # Group by team and calculate the average points scored
 average_points_by_team = df.groupby('Team')['Points Scored'].mean()
 print("\nAverage Points Scored by Team:\n", average_points_by_team)
@@ -655,11 +655,14 @@ print("\nAverage Points Scored by Team:\n", average_points_by_team)
 ```py
 # Using the data from above
 # Create a bar chart using Matplotlib
+import matplotlib.pyplot as plt
+import seaborn as sns
 plt.figure(figsize=(8, 6))  # Adjust figure size
 plt.bar(average_points_by_team.index, average_points_by_team.values)
 plt.xlabel("Team")
 plt.ylabel("Average Points Scored")
 plt.title("Average Points Scored by Team")
+plt.savefig("my_plot1.png")
 plt.show()
 
 # Create a scatter plot
@@ -668,6 +671,7 @@ plt.scatter(df['Points Scored'], df['Points Allowed'])
 plt.xlabel("Points Scored")
 plt.ylabel("Points Allowed")
 plt.title("Points Scored vs. Points Allowed")
+plt.savefig("my_plot2.png")
 plt.show()
 ```
 ---
