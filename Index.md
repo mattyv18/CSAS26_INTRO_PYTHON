@@ -52,7 +52,9 @@ Statistics PhD!
     <td><img src="forecast_vs_actual2.png"></td>
   </tr>
 </table>
+
 ---
+
 # Prerequisites:
 
 A laptop with access to internet.
@@ -687,17 +689,12 @@ plt.show()
 ---
 # Thank you for having me!
 
-## Resources:
-
-- W3Schools
-- FreeCodeCamp
-
 # Acknowledgements
 
-- Thank you to Dr. Yan for letting me do this presentation
+- Thank you to Dr. Yan for the wonderful opportunity to teach you all
 
 ---
 
 # 
 
-# Email me at contact@charitarth.dev if you have any questions!
+# Email me at matthew.venzie@uconn.edu if you have any questions!
