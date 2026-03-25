@@ -24,7 +24,7 @@ theme: uncover
 
 # About Me
 
-![bg right 60%](https://raw.githubusercontent.com/charitarthchugh/website/master/assets/images/myself.png)
+<img src="IMG_7757.jpg" alt="My Image">
 
 - 3rd Year Applied Mathematics and Statistics Student at UConn
 - Unergraduate Time Series Researcher
