@@ -7,12 +7,6 @@ theme: uncover
 # class: [blue]
 ---
 
-<table>
-  <tr>
-    <td><img src="nhl.png"></td>
-    <td><img src="forecast_vs_actual2.png"></td>
-  </tr>
-</table>
 
 # Introduction to Python
 
@@ -52,7 +46,12 @@ Statistics PhD!
 
 ---
 
-![bg left 90%](./assets/tennis.png)
+<table>
+  <tr>
+    <td><img src="nhl.png"></td>
+    <td><img src="forecast_vs_actual2.png"></td>
+  </tr>
+</table>
 ---
 # Prerequisites:
 
