@@ -677,7 +677,7 @@ plt.show()
 ---
 <table>
   <tr>
-    <td><img src="assets/matplotlib1.png" alt="Image 1"></td>
+    <td><img src="assets/matplotlib1(1).png" alt="Image 1"></td>
     <td><img src="assets/matplotlib2.png" alt="Image 2"></td>
   </tr>
 </table>
