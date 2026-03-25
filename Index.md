@@ -24,7 +24,7 @@ theme: uncover
 
 # About Me
 
-<img src="IMG_7757.jpeg" alt="My Image">
+<img src="IMG_7757.jpeg" alt="My Image" width="300">
 
 - 3rd Year Applied Mathematics and Statistics Student at UConn
 - Unergraduate Time Series Researcher
