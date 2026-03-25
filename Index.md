@@ -9,7 +9,7 @@ theme: uncover
 
 <table>
   <tr>
-    <td><img src="game.csv.zip"></td>
+    <td><img src="nhl.png"></td>
     <td><img src="forecast_vs_actual2.png"></td>
   </tr>
 </table>
