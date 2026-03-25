@@ -12,7 +12,7 @@ marp: false
 #### Regular Pip
 
 In the current directory
-
+ 
 ```bash
 python3 -m venv env
 source env/bin/activate # Change for your shell if needed
