@@ -18,7 +18,7 @@ We will be using Google Colaborate for a code demo. Participants can choose to f
 
 **If you have a gmail account**: If you do not have python installed but have a gmail account, you can follow along with Google Colaborate. 
 
-1. Click on the following link: [Demo File]([https://colab.research.google.com/drive/1t_x1m4N0gopUKamo-9Aju3qZUeKLh1sg?usp=sharing#scrollTo=ZOa5I9jycKjE](https://colab.research.google.com/drive/1t_x1m4N0gopUKamo-9Aju3qZUeKLh1sg?usp=sharing#scrollTo=Zcv9ZHJyis-G)
+1. Click on the following link: [Demo File]([https://colab.research.google.com/drive/1t_x1m4N0gopUKamo-9Aju3qZUeKLh1sg?usp=sharing#scrollTo=ZOa5I9jycKjE]([https://colab.research.google.com/drive/1t_x1m4N0gopUKamo-9Aju3qZUeKLh1sg?usp=sharing#scrollTo=Zcv9ZHJyis-G)](https://colab.research.google.com/drive/1dbvt-_aY65nToVf8kdDbjoihwUlGraFq))
 2. Click on "Open With"
 3. Click on `Connect More Apps`
 4. Search and install `Colaboratory`
