@@ -10,7 +10,7 @@ Python is a high level, object oriented, cross platform and open source programm
 Laptop, no knowledge of python needed. We will be using google colab.
 
 # Slides
-[Slides](http://localhost:4092/index.html#/3/1)
+[Slides](http://localhost:7683/index.html#/title-slide)
 
 ## Follow Along During Demo
 
